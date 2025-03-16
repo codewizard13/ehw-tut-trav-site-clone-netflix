@@ -60,8 +60,24 @@ img {
 }
 
 
+.showcase-top a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
 
 
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: .4rem 1.3rem;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
 
 
 
