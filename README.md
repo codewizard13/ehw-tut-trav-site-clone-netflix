@@ -45,92 +45,24 @@
 
 ## CODE
 
-**_Heres a code snippet I created with the help of Perplexity AI that lets me display and use ACF fields as custom dynamic tags in WPForms_**
-
-- Add to functions.php or a custom plugin
-
-```php
-/**
- * Summary of dynamic_acf_smart_tags:
- * 
- * - Not sure why this works, but it does. Perplexity AI helped.
- * @param mixed $tags
- * 
- * Ref:
- * - https://www.perplexity.ai/search/i-m-trying-to-include-an-acf-c-bDVrWF9dQamDSSUNDcJonA
- */
-function dynamic_acf_smart_tags($tags) {
-	$tags['acf_field'] = 'ACF Field';
-	return $tags;
-}
-add_filter('wpforms_smart_tags', 'dynamic_acf_smart_tags');
-
-function process_dynamic_acf_smart_tags($content, $tag) {
-	if (strpos($tag, 'acf_field_') === 0) {
-			$field_name = str_replace('acf_field_', '', $tag);
-			$field_value = get_field($field_name, get_the_ID());
-			$content = str_replace('{acf_field_' . $field_name . '}', $field_value, $content);
-	}
-	return $content;
-}
-add_filter('wpforms_smart_tag_process', 'process_dynamic_acf_smart_tags', 10, 2);
-```
-
-### functions.php snippet: PHPMailer - to send email without needed a plugin
-
-```php
-
-// PHP MAILER SMTP OVERRIDE
-// REF: https://github.com/PHPMailer/PHPMailer/
-//     https://www.youtube.com/watch?v=YtNraQxUTM0
-//
-// NOTE: SMTP_LOGIN, SMTP_PASSWORD are defined in wp-config.php
-//
-add_action('phpmailer_init','custom_mailer');
-function custom_mailer( PHPMailer $phpmailer ) {
-
-	
-	$from_email = 'noreply@yoursite.com';
-	$from_name = 'Your Site No-Reply';
-	$host = 'smtp.your-isp-server.com';
-	$port = 587;
-	$smtp_secure = 'tls';
-
-
-	// $mail_body = '<p><strong>Hello!</strong> This is an email sent with PHPMAILER</p>';
-
-	// SMTP / Server Settings
-
-	// $phpmailer->SMTPDebug = 2;
-	$phpmailer->SetFrom($from_email, $from_name);
-	$phpmailer->Host = $host;
-	$phpmailer->Port = $port;
-	$phpmailer->SMTPAuth = true;
-	$phpmailer->SMTPSecure = $smtp_secure;
-	$phpmailer->Username = SMTP_LOGIN;
-	$phpmailer->Password = SMTP_PASSWORD;
-	$phpmailer->isSMTP();
-
-	// $phpmailer->isHTML(true);
-	// $phpmailer->Subject = $phpmailer->Subject . ' - EXTRA SUBJECT PART!';
-	// $phpmailer->Body = $phpmailer->Body . $mail_body . '<br>This is a <b>SIGNATURE</b><br>';
-	// $phpmailer->AltBody = strip_tags($mail_body);
-
-}
-```
+- NONE YET
 
 
 ## TAGS
 
-`Tutwrk` `WordPress` `WordPress Themes` `Themes from Scratch` `Eric Hepperle` `Mr Digital` `WordPress Classic Theme` `WPForms` `Forms Plugin` `PHPMailer` `PHP Mail` `WordPress Email`
+`Tutwrk` `Website from Scratch` `Eric Hepperle` `Traversy` `Webpage Clone` `Netflix`
 
 
 ## PURPOSE
 
-This is a custom PHP theme with sidebar on the Right. [Following MrDigital's excellent tutorial]
+This repo follows [Traversy Media](https://www.youtube.com/@TraversyMedia) tutorial for [building a Netflix clone webpage from scratch with HTML5/CSS3/JS](https://www.youtube.com/watch?v=P7t13SGytRk).
+
+## TUTORIAL INFO
+
+- Title: Build a Netflix Landing Page Clone with HTML, CSS & JS
+- Base URL: https://www.youtube.com/watch?v=P7t13SGytRk
+- Channel: Traversy Media
 
 ## REFERENCES
 
-- [WordPress Theme Development From Scratch](https://www.youtube.com/watch?v=n3EcEYFgyrQ&list=PLgFB6lmeXFOpHnNmQ4fdIYA5X_9XhjJ9d)
-- [WordPress Tutorial 1: Introduction](https://www.youtube.com/watch?v=8OBfr46Y0cQ&list=PLpcSpRrAaOaqMA4RdhSnnNcaqOVpX7qi5)
-- [How to convert an HTML Template to a WordPress Theme (2019)](https://www.youtube.com/watch?v=FN5jhyspVXc)
+- NONE YET
