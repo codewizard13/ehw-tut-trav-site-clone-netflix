@@ -39,21 +39,9 @@
 
 ## SCREENSHOTS
 
-### single-cars.php
+**PROGRESS 03-16-2025:  STOPPED @ 20:06 after create sign in btn**
 
-
-**_Laravel Mix works (VID 15)_**
-
-![Laravel Mix works (VID 15)](/assets/images/screens/ehw-car-theme-103--01--single-cars--laravel-mix-works.jpg)
-
-**_single-cars.php:  Form success (VID 14)_**
-![single-cars.php:  Form success (VID 14)](/assets/images/screens/ehw-car-theme-001--02--single-cars.jpg)
-
-
-**_Laravel Mix works (VID 15)_**
-
-![single-cars - Form succes (VID 15)](/assets/images/screens/ehw-car-theme-103--09--single-cars--form-success.jpg)
-
+![PROGRESS 03-16-2025:  STOPPED @ 20:06 after create sign in btn](/img/screens/tut-progress-001.png)
 
 ## CODE
 
